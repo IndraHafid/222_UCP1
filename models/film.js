@@ -1,25 +1,26 @@
 module.exports = (sequelize, DataTypes) => {
-    const film = sequelize.define("film", {
-        ID: {
+    const Film = sequelize.define('Film', {
+        id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        Nama_Film: { 
-            type: DataTypes.STRING
+
+        Nama_Film: {
+            type: DataTypes.STRING,
         },
-        Deskripsi: {
-            type: DataTypes.STRING
+        Description: {
+            type: DataTypes.STRING,
         },
         Sutradara: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING,
         },
         Tahun_Terbit: {
-            type: DataTypes.DATE
+            type: DataTypes.INTEGER,
         },
-        Genre: { 
-            type: DataTypes.VARCHAR
-        }
+        Genre: {
+            type: DataTypes.STRING,
+        },
     });
-    return film;
+        return Film;
 };
